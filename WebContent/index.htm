@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>India's Matrimony site</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="ladkaladki.com is a matrimonial site for indian brides and grooms" />
+<meta name="keywords" content="marraiage, alliance, indian bride indian groom, hindu boy hindu girl" />
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/smoothness/jquery-ui-1.9.2.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/site.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css" />
+<link rel="stylesheet" href="css/validationEngine.jquery.css" type="text/css"/>
+<link rel="stylesheet" type="text/css" media="screen" href="http://cdn.webrupee.com/font" />
+	
+<script src="http://cdn.webrupee.com/js" type="text/javascript"></script>	
+
+<script src="js/jquery-1.9.1.js" type="text/javascript" language="javascript"></script>
+<script src="js/jquery-ui-1.10.1.custom.js" type="text/javascript" language="javascript"></script>
+
+<script src="js/jshashtable-2.1.js" type="text/javascript" language="javascript"></script>
+<script src="js/jquery.numberformatter-1.2.3.min.js" type="text/javascript" language="javascript"></script>
+
+<script src="js/plugin/jqGrid/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script src="js/plugin/jqGrid/jquery.jqGrid.min.js" type="text/javascript" language="javascript"></script>
+<script src="js/plugin/jqValidation/jquery.validationEngine-en.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/plugin/jqValidation/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/imagePlugin.js" type="text/javascript" language="javascript"></script>
+
+
+
+<script src="js/appui/loginUserStatistics.js" type="text/javascript" language="javascript"></script>
+<script src="js/appui/profileListing.js" type="text/javascript" language="javascript"></script>
+<script src="js/appui/llCriteria.js" type="text/javascript" language="javascript"></script>
+<script src="js/appui/ladkaladkimain.js" type="text/javascript" language="javascript"></script>
+<script src="js/appui/llgallery.js" type="text/javascript" language="javascript"></script>
+<script src="js/appui/contactForm.js" type="text/javascript" language="javascript"></script>
+
+    <script type="text/javascript">
+          $(document).ready(
+            function () {
+                $("#accordian").accordion({ header: "h3",          
+                    autoheight: true,
+                    active: 0,
+                    alwaysOpen: false,
+                    fillspace: false,
+                    collapsible: true,
+                    heightStyle: content   //auto, fill, content
+                });
+            });
+    </script>
+
+</head>
+<body>
+
+
+<div id="header" class="header">  
+	<div class="ui-corner-all ui-widget-content padding3 hwdBusContainer  hdrBanner" style="text-align:left"> 
+	    <table width="100%">
+	    <tr>
+	    <td>
+        <img src="images/thecarmandilogo.jpg" />
+	    </td>
+        </tr>
+	    </table>
+	</div>
+</div>
+
+
+<div id="content-containers" class="content-container ui-corner-all" style="margin-top:3px">
+   	<table width="100%" align="center" class="ui-corner-all ui-widget-content">
+   		<tr>
+   			<td class="leftNav ui-corner-all" > 
+ 
+   			<div id="leftNav" class="leftNav" style="padding-right:4px"> 
+   			   
+   			   <div id="usrLookingFor" class="ui-corner-all ui-widget-content searchFieldBackground" >
+   			      <table>
+   			      
+	   			       <tr >
+		                   <td width="235px" class="searchFieldBackground">
+		                   Looking for partner ?
+		                   </td>
+	                   </tr>
+	                  
+	                  <tr>
+		                  <td>
+		   			      <input type="radio" id="lookingForBrideId" name="lookingFor" value='M' checked />
+		   			      <label for="lookingForBrideId" class ="cb-enable selected"><span>Bride</span></label>
+		   			      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		   			      <input type="radio" id="lookingForGroomId" name="lookingFor" value='F' />	     
+		   			      <label for="lookingForGroomId" class ="cb-disable "><span>Groom</span></label>
+		   			      </td>
+	   			      </tr>
+   			      
+   			      </table>
+   			   
+   			   </div>
+               
+   			   <div id="usrAge" class="ui-corner-all ui-widget-content searchFieldBackground" >
+               <table>
+                   <tr>
+	                   <td colspan=2  width="235px">
+	                   Age Between ?
+	                   </td>
+                   </tr>
+                   
+                   <tr>
+                       <td>
+                       <label for="minAge">From</label>                
+                       </td>
+                       <td>
+                       <input id="minAge" type="text" value="" />
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                       <label for="maxAge">To</label>
+                       </td>
+                       <td>
+                       <input id="maxAge" type="text" value="" />
+                       </td>
+                   </tr>
+               </table>
+               </div>
+
+               <div id="usrReligion" class="ui-corner-all ui-widget-content searchFieldBackground">
+                  <table id="selectReligion"> <tr><td></td></tr></table>
+               </div>
+               
+               
+               <div id="usrLanguage" class="ui-corner-all ui-widget-content searchFieldBackground">
+                  <table id="selectLanguage"> <tr><td></td></tr></table>
+               </div>
+               
+                              
+               <div id="usrCountry" class="ui-corner-all ui-widget-content searchFieldBackground">
+                  <table id="selectCities"> <tr><td></td></tr></table>
+               </div>
+                                
+    			<div id="usrSearch">		
+                <a id="postCarSaleRequest" href="#" class="btnPostAd">Search</a>
+                </div>		
+   			</div>
+   			</td>
+   			
+   			<td> 
+   			<div id="contentNav" class="contentNav ui-corner-all ui-widget-content" style="text-align:center">
+			    <noscript>
+                <p> For full functionality of this site it is necessary to enable JavaScript.<br><br>
+                     Here are the  <a href="http://www.enable-javascript.com/" target="_blank"> instructions how to enable JavaScript in your web browser</a></p>.
+                </noscript>
+              
+   			    <div id="autoQueryResult">
+   			       <div id="resultListing"></div>
+   			    </div>
+   			    
+
+   			</div>
+   			<div id='loader' class='loader' style='display:none;'>
+   			<img id='img-loader' src='images/loading.gif' /> <br>
+   			Loading Images....Please Wait
+   			</div>
+            
+            <div id="popupOverlay" class='popupOverlay'> 
+                 <!-- Insert Selected User Profile information if the Image Gallery  Here --> 
+            </div>
+            
+            <div id="autoSaleForm" class="autoSaleForm"> 
+            <!-- Insert Contact Profile Message  Here --> 
+            </div>
+
+            
+   			</td>
+   			
+   			<td class="rightNav ui-corner-all" > 
+	            <div id="rightNav" class="rightNav" style="padding-right:4px"> 
+	                <div id="loginUserStats"> </div>
+	            </div>
+            </td>
+ 
+   		</tr>
+   	</table>
+</div>
+
+<div id="footer" class="ui-corner-all Footer" style="text-align:center"> 
+	All rights reserved, ladkaladki.in
+</div>
+
+
+</body>
+</html>
